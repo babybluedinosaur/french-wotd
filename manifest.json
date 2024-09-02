@@ -5,6 +5,10 @@
   
     "description": "Gives us everyday one arabic word.",
   
+    "action": {
+      "default_popup": "popup.html"
+    },
+
     "icons": {
       "48": "icons/icon.png"
     },
