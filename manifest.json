@@ -24,6 +24,13 @@
         "matches": ["*://*.mozilla.org/*"],
         "js": ["word.js"]
       }
+    ],
+
+    "web_accessible_resources": [
+      {
+        "resources": ["word-list.txt"],
+        "matches": ["<all_urls>"]
+      }
     ]
   }
   
