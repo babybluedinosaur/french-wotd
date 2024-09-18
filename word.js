@@ -3,7 +3,8 @@ async function fetchWord()
     const response = await fetch(browser.runtime.getURL('data/word-list.txt'));
     const text = await response.text();
     const words = text.split('\n').map(word => word.trim());
-    displayRandomWord(words);
+    tomorrow = new Date()+1;
+    displayRandomWord(words);   
 
 }
 
