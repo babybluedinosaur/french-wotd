@@ -1,7 +1,8 @@
 html,
 
 .popup-content {
-    background-color: rgba(0, 255, 255, 0.811);
+    background-color: rgb(10, 5, 145);
+    color: rgb(235, 230, 255);
     text-align: center;
 }
 
