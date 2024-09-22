@@ -3,9 +3,7 @@ async function fetchWord()
     const response = await fetch(browser.runtime.getURL('data/word-list.txt'));
     const text = await response.text();
     const words = text.split('\n').map(word => word.trim());
-    tomorrow = new Date()+1;
-    displayRandomWord(words);   
-
+    displayRandomWord(words);
 }
 
 function displayRandomWord(words)
@@ -14,4 +12,5 @@ function displayRandomWord(words)
     document.getElementById('word').textContent = word;
 }
 
-fetchWord();
+setInterval(fetchWord, 3000);
+//how can keep the previous displayed word while waiting for next work? extension resets after clicking on puzzle symbol
