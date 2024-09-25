@@ -1,8 +1,10 @@
 function checkIfDayPassed()
 {
-    if (localStorage.getItem('todaysDate') !== new Date())
+    const today = new Date().toDateString();
+    const storedDate = localStorage.getItem('todaysDate');
+    if (storedDate !== today)
     {
-        localStorage.setItem('todaysDate', new Date());
+        localStorage.setItem('todaysDate', today);
         return true;
     }
     return false;
@@ -11,7 +13,7 @@ function checkIfDayPassed()
 //get word from data.txt
 async function fetchWord()
 {
-    if (checkIfDayPassed) 
+    if (checkIfDayPassed()) 
     {
         const response = await fetch(browser.runtime.getURL('data/word-list.txt'));
         const text = await response.text();
