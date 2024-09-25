@@ -1,16 +1,31 @@
+function checkIfDayPassed()
+{
+    if (localStorage.getItem('todaysDate') !== new Date())
+    {
+        localStorage.setItem('todaysDate', new Date());
+        return true;
+    }
+    return false;
+}
+
+//get word from data.txt
 async function fetchWord()
 {
-    const response = await fetch(browser.runtime.getURL('data/word-list.txt'));
-    const text = await response.text();
-    const words = text.split('\n').map(word => word.trim());
-    displayRandomWord(words);
+    if (checkIfDayPassed) 
+    {
+        const response = await fetch(browser.runtime.getURL('data/word-list.txt'));
+        const text = await response.text();
+        const words = text.split('\n').map(word => word.trim());
+        const word = words[Math.floor(Math.random() * words.length)];
+        localStorage.setItem('word', word);
+    }
+    displayRandomWord(localStorage.getItem('word'));
 }
 
-function displayRandomWord(words)
+//display word on extension
+function displayRandomWord(word)
 {
-    const word = words[Math.floor(Math.random() * words.length)];
     document.getElementById('word').textContent = word;
 }
+fetchWord();
 
-setInterval(fetchWord, 3000);
-//how can keep the previous displayed word while waiting for next work? extension resets after clicking on puzzle symbol
