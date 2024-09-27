@@ -27,6 +27,7 @@ async function fetchWord()
 //display word on extension
 function displayRandomWord(word)
 {
+    document.getElementById('date').textContent = new Date().toLocaleDateString();
     document.getElementById('word').textContent = word;
 }
 fetchWord();
