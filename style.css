@@ -1,22 +1,32 @@
 html,
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .header {
-    background-color: rgb(10, 5, 145);
+    background-color: rgb(80, 255, 179);
     color: rgb(235, 230, 255);
-    font-size: x-large;
+    height: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.body {
-    background-color: rgb(10, 5, 145);
-    color: rgb(235, 230, 255);
-    font-size: x-large;
-    text-align: center;
-    line-height: 2;
+.frame-outer {
+    background-color: rgb(100, 100, 255);
+    padding: 10px;
+    border-radius: 10px;
+
 }
 
 .frame-content {
+    background-color:  rgb(80, 255, 179);
     border: 5px solid rgb(235, 230, 255);
+    color: rgb(235, 230, 255);
+    border-radius: 10px;
+    font-size: x-large;
+    text-align: center;
+    line-height: 2;
     padding: 10px;
     margin: 0;
 }
