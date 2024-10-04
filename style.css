@@ -1,14 +1,14 @@
 html,
 
 .frame-outer {
-    background-color: rgb(35, 120, 250); 
+    background-color:  rgb(35, 195, 250); 
     padding: 0px;
     border-radius: 5px;
 }
 
 .frame-content {
     background-color:  rgb(100, 230, 255);
-    border: 5px solid  rgb(35, 120, 250);
+    border: 5px solid  rgb(35, 195, 250);
     color: rgb(235, 230, 255);
     border-radius: 5px;
     text-align: center;
