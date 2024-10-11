@@ -1,32 +1,32 @@
 html,
 
 .frame-outer {
-    background-color:  rgb(35, 195, 250); 
+    background-color:  rgb(100, 230, 255); 
     padding: 0px;
     border-radius: 5px;
 }
 
 .frame-content {
-    background-color:  rgb(100, 230, 255);
-    border: 5px solid  rgb(35, 195, 250);
+    background-color:  rgb(35, 195, 250);
+    border: 5px solid  rgb(100, 230, 255);
     color: rgb(235, 230, 255);
     border-radius: 5px;
     text-align: center;
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
+    line-height: 1;
     padding: 5px;
     margin: 0;
+    border-radius: 10px;
 
 }
 
-.header {
-    background-color:  rgb(100, 230, 255);
+.word {
+    background-color:  rgb(35, 195, 250);
     color: rgb(235, 230, 255);
     text-align: center;
-    font-size: x-large;
+    font-size: xx-large;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 
