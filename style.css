@@ -1,33 +1,43 @@
-html,
-
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
 .frame-outer {
     background-color:  rgb(100, 230, 255); 
-    padding: 0px;
-    border-radius: 5px;
+    border: 5px solid;
+    border-radius: 10px;
+    border-image: repeating-linear-gradient(
+                45deg,
+                blue 0%,
+                blue 10%,
+                white 10%,
+                white 20%,
+                red 20%,
+                red 30%
+            ) 5;
+    padding: 10px;
+    margin: 0 auto;
+    display: inline-block; 
 }
 
 .frame-content {
     background-color:  rgb(35, 195, 250);
-    border: 5px solid  rgb(100, 230, 255);
     color: rgb(235, 230, 255);
     border-radius: 5px;
     text-align: center;
     font-size: x-large;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1;
-    padding: 5px;
+    font-family: Arial;
+    line-height: 1.5;
     margin: 0;
-    border-radius: 10px;
+    border-radius: 5px;
 
 }
 
 .word {
-    background-color:  rgb(35, 195, 250);
     color: rgb(235, 230, 255);
-    text-align: center;
     font-size: xx-large;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Trebuchet MS';
+    margin: 0;
 }
-
-
-
